@@ -16,7 +16,7 @@ public class SeleniumTests {
 	
 	@Before
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Documents\\Git\\A-Testing\\WebDriver\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Documents\\Auto-Testing\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}
@@ -32,6 +32,7 @@ public class SeleniumTests {
 		WebElement submit = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[3]/td[2]/p/input"));
 		Thread.sleep(000);
 		submit.submit();
+		
 		Thread.sleep(000);
 		
 		WebElement linkLogin = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[2]/small/a"));
